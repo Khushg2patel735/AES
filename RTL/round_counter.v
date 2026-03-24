@@ -20,12 +20,12 @@ module round_counter #(
         round <= 4'd1;
         done  <= 1'b0;
         end
-        else if(round !=0 && round < NR)
+        else if(round !=0 && round < NR+1)
             begin 
             round <= round + 1;
             done <= 1'b0;
         end
-        else if(round == NR)
+        else if(round == NR+1)
         begin
             done <= 1'b1;
             round <= 4'd0;

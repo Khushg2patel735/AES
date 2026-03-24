@@ -1,0 +1,2 @@
+var g_data = ["","../TB/aes_top_tb.v","../RTL/aes_top.v","../RTL/round_counter.v","../RTL/state_reg.v","../RTL/key_expansion.v","../RTL/sbox.v","../RTL/add_round_key.v","../RTL/aes_round.v","../RTL/sub_bytes.v","../RTL/shift_rows.v","../RTL/mix_columns.v","../RTL/aes_final_round.v"];
+processSrcNamesData(g_data);

@@ -1,0 +1,2 @@
+var g_data = {"7":["work.add_round_key",100.00,1],"12":["work.aes_final_round",100.00,1],"8":["work.aes_round",100.00,1],"2":["work.aes_top",100.00,1],"1":["work.aes_top_tb",100.00,1],"5":["work.key_expansion",100.00,1],"11":["work.mix_columns",100.00,1],"3":["work.round_counter",100.00,1],"6":["work.sbox",100.00,1],"10":["work.shift_rows",100.00,1],"4":["work.state_reg",100.00,1],"9":["work.sub_bytes",100.00,1]};
+processDuLinks(g_data);
