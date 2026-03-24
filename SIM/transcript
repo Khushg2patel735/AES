@@ -1,0 +1,225 @@
+# vsim -voptargs="+acc" aes_top_tb -c -do "run -all; exit" 
+# Start time: 12:57:09 on Mar 24,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.aes_top_tb(fast)
+# Loading work.aes_top(fast)
+# Loading work.round_counter(fast)
+# Loading work.state_reg(fast)
+# Loading work.key_expansion(fast)
+# Loading work.sbox(fast)
+# Loading work.add_round_key(fast)
+# Loading work.aes_round(fast)
+# Loading work.sub_bytes(fast)
+# Loading work.shift_rows(fast)
+# Loading work.mix_columns(fast)
+# Loading work.aes_final_round(fast)
+# run -all
+# 
+# ***********************************************
+# Encryption Test initiate
+# ***********************************************
+# 
+# ::Sanity Test::
+# 
+# Round=1 State=00102030405060708090a0b0c0d0e0f0
+# Round=2 State=89d810e8855ace682d1843d8cb128fe4
+# Round=3 State=4915598f55e5d7a0daca94fa1f0a63f7
+# Round=4 State=fa636a2825b339c940668a3157244d17
+# Round=5 State=247240236966b3fa6ed2753288425b6c
+# Round=6 State=c81677bc9b7ac93b25027992b0261996
+# Round=7 State=c62fe109f75eedc3cc79395d84f9cf5d
+# Round=8 State=d1876c0f79c4300ab45594add66ff41f
+# Round=9 State=fde3bad205e5d0d73547964ef1fe37f1
+# Round=10 State=bd6e7c3df2b5779e0b61216e8b10b689
+# 
+# ***********************************************
+# Plaintext  = 00112233445566778899aabbccddeeff
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = 69c4e0d86a7b0430d8cdb78070b4c55a
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Courner Test:LOWER Boundary::
+# 
+# Round=1 State=00000000000000000000000000000000
+# Round=2 State=01000000010000000100000001000000
+# Round=3 State=c6e4e48ba48787e8c6e4e48ba48787e8
+# Round=4 State=282df3c46af386254a4e90a70890e546
+# Round=5 State=abd2cdfe375ab54950a0afc0759a6a5f
+# Round=6 State=d46f4f6c55b896337e05bb3d7979de23
+# Round=7 State=04f2ca9707782845e22f019649c5d710
+# Round=8 State=b7aae4c51d252d4f6c920f8194e58150
+# Round=9 State=23e78c3c132163dbaac0c6572e03cb95
+# Round=10 State=7ffe0e9551a566350e347c472929eccb
+# 
+# ***********************************************
+# Plaintext  = 00000000000000000000000000000000
+# Cipherkey  = 00000000000000000000000000000000
+# Ciphertext = 66e94bd4ef8a2c3b884cfa59ca342b2e
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Courner Test:HIGHER Boundary::
+# 
+# Round=1 State=00000000000000000000000000000000
+# Round=2 State=8b8a8a8a747575758b8a8a8a74757575
+# Round=3 State=88ad4e9ce414f7bd7752b1631beb0842
+# Round=4 State=6b4ae34a8f51ea5465d007a8d67d7094
+# Round=5 State=90dae4efa36ae74502801ca1c48a0879
+# Round=6 State=09d77387006209ce6f03510274e17665
+# Round=7 State=0abbb851a27cf8f39ea942f28ad7cec1
+# Round=8 State=434687e86f6b051988fed2b82d864770
+# Round=9 State=c74294201f2d0405c8792bba2a18d3c7
+# Round=10 State=585389ccb9d2bd0d08049b84ad4125ba
+# 
+# ***********************************************
+# Plaintext  = ffffffffffffffffffffffffffffffff
+# Cipherkey  = ffffffffffffffffffffffffffffffff
+# Ciphertext = bcbf217cb280cf30b2517052193ab979
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Single bit at LSB Test::
+# 
+# Round=1 State=000102030405060708090a0b0c0d0e0e
+# Round=2 State=611d5419fec241ab6a7f2590f13757a2
+# Round=3 State=194c354feb00051d4db4bb78253c0be1
+# Round=4 State=b2301f4b38d36c2aa572c4afd605a021
+# Round=5 State=62d5827e083a6cd76d02f0cc2f72545a
+# Round=6 State=da2a536683d29411f574e75c995e4950
+# Round=7 State=f3eb2b03910bcf76f7addf5a91b08e11
+# Round=8 State=6f99eca73cbf496e6f87e19343da7eba
+# Round=9 State=181ccbd5ff8b80c303c678ab54f3878a
+# Round=10 State=90ef43400fdadef7c0fdd75fee010cbb
+# 
+# ***********************************************
+# Plaintext  = 00000000000000000000000000000001
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = 7346139595c0b41e497bbde365f42d0a
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Single bit at MSB Test::
+# 
+# Round=1 State=800102030405060708090a0b0c0d0e0f
+# Round=2 State=fb6e8651fec241ab6a7f2590f13757a2
+# Round=3 State=c2acd574ee050a172918731c684a30da
+# Round=4 State=99d1c66bf835e951afbe7265dd201a5b
+# Round=5 State=58d7443123b10f32ac76e78d75d7991f
+# Round=6 State=ff2c6991842716c2437063acb5b0bad4
+# Round=7 State=8ef2e0e0cfddf7cb7daf46bbfecc9d00
+# Round=8 State=47f4b96cd82495f7824493c3214907de
+# Round=9 State=87ed951ede4f7e64b5e1867c91771e07
+# Round=10 State=6c947db9d997c021cc8a5ca1bb198e50
+# 
+# ***********************************************
+# Plaintext  = 80000000000000000000000000000000
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = 4399572cd6ea5341b8d35876a7098af7
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Toggle[101010....] Test::
+# 
+# Round=1 State=aaaba8a9aeafacada2a3a0a1a6a7a4a5
+# Round=2 State=f8c97087855760331dec25109bd15f05
+# Round=3 State=8d4f167ac070587c3d73a30526248440
+# Round=4 State=fc1777e0b24637152fcba3876758a57b
+# Round=5 State=f9cc6a653dd7229ac1f057ae6ad9ee2d
+# Round=6 State=841af1a60d8eb1bc455f3583032861a7
+# Round=7 State=01a99aabc3fa239ce3ce912c2528624f
+# Round=8 State=9ec3af21f1fbae1b5c7ee8550930f370
+# Round=9 State=8ab15d1e03aa315eae70ec12c62999f8
+# Round=10 State=c8aca4b369072cbe23aadcf280883e0f
+# 
+# ***********************************************
+# Plaintext  = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = fbd49b091a38f87ad5c3ee2580ba414c
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Toggle[010101....] Test::
+# 
+# Round=1 State=55545756515053525d5c5f5e59585b5a
+# Round=2 State=b10487193d105398a7d3e8148e54b4c5
+# Round=3 State=45c5114ed98e9ac037f85d5f40008c25
+# Round=4 State=3248dad730f6049bde223f84902b31c1
+# Round=5 State=cab7f41efa502e4788654c156693a143
+# Round=6 State=1219f83a640c0f07a3ee2938438631d5
+# Round=7 State=68e06c604e67f7a7fbd1a54b289734e9
+# Round=8 State=12b99e6a37f4a860d5a21c3cc54f0b8e
+# Round=9 State=9149f964ec8d9519aacb40c52a03337a
+# Round=10 State=796389b2d668de7b93ad7422ae67ec3c
+# 
+# ***********************************************
+# Plaintext  = 55555555555555555555555555555555
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = a5548f94150184202f8200aaa9d02d56
+# ***********************************************
+# 
+# ***********************************************
+# AES PASS
+# ***********************************************
+# ::Error Test::
+# 
+# Round=1 State=00102030405060708090a0b0c0d0e0f0
+# Round=2 State=89d810e8855ace682d1843d8cb128fe4
+# Round=3 State=4915598f55e5d7a0daca94fa1f0a63f7
+# Round=4 State=fa636a2825b339c940668a3157244d17
+# Round=5 State=247240236966b3fa6ed2753288425b6c
+# Round=6 State=c81677bc9b7ac93b25027992b0261996
+# Round=7 State=c62fe109f75eedc3cc79395d84f9cf5d
+# Round=8 State=d1876c0f79c4300ab45594add66ff41f
+# Round=9 State=fde3bad205e5d0d73547964ef1fe37f1
+# Round=10 State=bd6e7c3df2b5779e0b61216e8b10b689
+# 
+# ***********************************************
+# Plaintext  = 00112233445566778899aabbccddeeff
+# Cipherkey  = 000102030405060708090a0b0c0d0e0f
+# Ciphertext = 69c4e0d86a7b0430d8cdb78070b4c55a
+# ***********************************************
+# 
+# ***********************************************
+# AES FAIL
+# 
+# Expected: 00000000000000000000000000000000
+# Cipertext: 69c4e0d86a7b0430d8cdb78070b4c55a
+# ***********************************************
+# 
+# ***********************************************
+# All Case are Done.
+# ***********************************************
+# 
+# ** Note: $finish    : ../TB/aes_top_tb.v(189)
+#    Time: 1045 ns  Iteration: 1  Instance: /aes_top_tb
+# End time: 12:57:10 on Mar 24,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
